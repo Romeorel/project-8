@@ -34,7 +34,7 @@ const corsOptions = {
   origin: 'https://project-8-self.vercel.app/',
   optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
 }
- 
+app.options('/books', cors()) 
 app.get('/books', cors(corsOptions), function (req, res, next) {
   res.json({msg: 'This is CORS-enabled for only example.com.'})
 })
