@@ -21,7 +21,7 @@ const CreateBook = () => {
     };
     setLoading(true);
     axios
-      .post("http://localhost:5555/books", data)
+      .post("https://project-8-n9bd.vercel.app/books", data)
       .then(() => {
         setLoading(false);
         enqueueSnackbar("Book created successfully", { variant: "success" });
