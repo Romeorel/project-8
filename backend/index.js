@@ -13,7 +13,7 @@ app.use(express.json());
 // Middleware for handling CORS POLICY
 app.use(cors(
     {
-        origin: ["https://project-8-n9bd.vercel.app"],
+        origin: ["https://project-8-self.vercel.app"],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
@@ -23,7 +23,7 @@ app.use(cors(
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'https://project-8-n9bd.vercel.app');
+    res.setHeader('Access-Control-Allow-Origin', 'https://project-8-self.vercel.app');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
