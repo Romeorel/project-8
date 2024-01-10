@@ -6,9 +6,6 @@ import booksRoute from "./routes/booksRoute.js";
 
 
 const app = express();
-var cors = require('cors');
-
-app.use(cors())
 
 // Middlware for parsing request body
 app.use(express.json());
