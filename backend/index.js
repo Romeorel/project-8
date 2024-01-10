@@ -10,7 +10,7 @@ const app = express();
 // Middlware for parsing request body
 app.use(express.json());
 
-app.options('*', cors()) 
+app.options('https://project-8-n9bd.vercel.app', cors()) 
 
 // Add headers before the routes are defined
 app.use(function (req, res, next) {
