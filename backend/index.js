@@ -6,7 +6,6 @@ import booksRoute from "./routes/booksRoute.js";
 import cors from "cors";
 
 const app = express();
-app.use(cors());
 
 // Middlware for parsing request body
 app.use(express.json());
@@ -31,10 +30,14 @@ app.use(function (req, res, next) {
     next();
 });
 
-app.get("/", (request, response) => {
-    console.log(request)
-    return response.status(234).send("Homepage");
-});
+const corsOptions = {
+  origin: 'https://project-8-self.vercel.app/',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
+ 
+app.get('/books', cors(corsOptions), function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for only example.com.'})
+})
 
 app.use("/books", booksRoute);
 
