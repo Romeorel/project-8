@@ -10,23 +10,12 @@ const app = express();
 // Middlware for parsing request body
 app.use(express.json());
 
-const corsOptions = {
-    origin: ['https://project-8-n9bd.vercel.app'],
-    allowedHeaders: ["Content-Type", "Authorization", "Access-Control-Allow-Methods", "Access-Control-Request-Headers"],
-    credentials: true,
-    enablePreflight: true
-}
-
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions))
-
 app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "'https://project-8-n9bd.vercel.app");
-  res.setHeader("Access-Control-Allow-Methods", "POST, GET, PUT");
-  res.setHeader("Access-Control-Allow-Headers", "Content-Type");
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET, PUT, POST, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept, Authorization');
   next();
-})
-
+});
 
 app.get("/", (request, response) => {
     console.log(request)
