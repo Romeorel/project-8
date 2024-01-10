@@ -11,6 +11,8 @@ const Home = () => {
   const [loading, setLoading] = useState(false);
   const [showType, setShowType] = useState("table");
 
+  axios.defaults.withCredentils = true;
+
   useEffect(() => {
     setLoading(true);
     axios
