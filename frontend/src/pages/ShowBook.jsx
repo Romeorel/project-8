@@ -9,7 +9,7 @@ const ShowBook = () => {
   const [loading, setLoading] = useState(false);
   const { id } = useParams();
 
-  axios.defaults.withCredentils = true;
+  axios.defaults.withCredentials = true;
 
   useEffect(() => {
     setLoading(true);
