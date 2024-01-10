@@ -11,7 +11,13 @@ const app = express();
 app.use(express.json());
 
 // Middleware for handling CORS POLICY
-app.use(cors())
+app.use(cors(
+    {
+        origin: ["https://project-8-n9bd.vercel.app/"],
+        methods: ["POST", "GET", "PUT", "DELETE"],
+        credentials: true
+    }
+))
 
 app.get("/", (request, response) => {
     console.log(request)
