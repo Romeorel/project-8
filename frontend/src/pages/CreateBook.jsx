@@ -13,7 +13,7 @@ const CreateBook = () => {
   const navigate = useNavigate();
   const { enqueueSnackbar } = useSnackbar();
 
-  axios.defaults.withCredentils = true;
+  axios.defaults.withCredentials = true;
 
   const handleSaveBook = () => {
     const data = {
