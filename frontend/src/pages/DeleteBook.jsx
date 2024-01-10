@@ -11,6 +11,8 @@ const DeleteBook = () => {
   const { id } = useParams();
   const { enqueueSnackbar } = useSnackbar();
 
+  axios.defaults.withCredentils = true;
+
 
   const handleDeleteBook = () => {
     setLoading(true);
