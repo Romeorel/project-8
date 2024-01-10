@@ -23,7 +23,7 @@ app.use(cors(
 app.use(function (req, res, next) {
 
     // Website you wish to allow to connect
-    res.setHeader('Access-Control-Allow-Origin', 'http://localhost:5555');
+    res.setHeader('Access-Control-Allow-Origin', 'https://project-8-n9bd.vercel.app');
 
     // Request methods you wish to allow
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
