@@ -13,7 +13,7 @@ app.use(express.json());
 // Middleware for handling CORS POLICY
 app.use(cors(
     {
-        origin: ["https://project-8-self.vercel.app/"],
+        origin: [""],
         methods: ["POST", "GET", "PUT", "DELETE"],
         credentials: true
     }
