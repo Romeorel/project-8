@@ -10,7 +10,7 @@ const app = express();
 // Middlware for parsing request body
 app.use(express.json());
 
-
+app.options('*', cors()) 
 
 // Add headers before the routes are defined
 app.use(function (req, res, next) {
