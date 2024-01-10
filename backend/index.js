@@ -10,14 +10,7 @@ const app = express();
 // Middlware for parsing request body
 app.use(express.json());
 
-// Middleware for handling CORS POLICY
-app.use(cors(
-    {
-        origin: ["https://project-8-n9bd.vercel.app"],
-        methods: ["POST", "GET", "PUT", "DELETE"],
-        credentials: true
-    }
-))
+
 
 // Add headers before the routes are defined
 app.use(function (req, res, next) {
