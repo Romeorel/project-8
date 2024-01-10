@@ -12,7 +12,7 @@ app.use(express.json());
 
 app.use(cors(
     {
-    origin: ['https://project-8-self.vercel.app/'],
+    origin: ['https://project-8-self.vercel.app'],
     allowedHeaders: ["Content-Type", "Authorization", "Access-Control-Allow-Methods", "Access-Control-Request-Headers"],
     credentials: true,
     enablePreflight: true
